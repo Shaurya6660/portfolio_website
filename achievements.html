@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements | Shaurya Chaudhary</title>
+    <link rel="stylesheet" href="achievements.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <header class="navbar">
+        <a href="home.html" class="logo">SC<span>.</span></a>
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation">☰</button>
+        <nav id="navMenu">
+            <a href="home.html">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="projects.html">Projects</a>
+            <a href="achievements.html" class="active">Achievements</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <p class="eyebrow">MY MILESTONES</p>
+            <h1>Learning. Growing. <span>Achieving.</span></h1>
+            <p>
+                Every certificate represents a new skill, an experience
+                or a step forward in my journey. This is where I showcase
+                what I have learned and accomplished.
+            </p>
+        </section>
+                <section class="stats-grid">
+            <article class="stat-card">
+                <span class="stat-icon">🏆</span>
+                <h2 id="certificateCount">0</h2>
+                <p>Certificates</p>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon">🎓</span>
+                <h2 id="workshopCount">0</h2>
+                <p>Workshops</p>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon">🚀</span>
+                <h2 id="competitionCount">0</h2>
+                <p>Competitions</p>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon">⭐</span>
+                <h2 id="otherCount">0</h2>
+                <p>Other Achievements</p>
+            </article>
+        </section>
+        <section class="achievement-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">01 / CERTIFICATE COLLECTION</p>
+                    <h2>My Certificates</h2>
+                    <p class="section-description">
+                        Courses, technical learning, workshops and certifications.
+                    </p>
+                </div>
+                <span class="section-label" id="galleryCount">0 ADDED</span>
+            </div>
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="technical">Technical</button>
+                <button class="filter-btn" data-filter="workshop">Workshops</button>
+                <button class="filter-btn" data-filter="competition">Competitions</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+            <div class="certificate-grid" id="certificateGrid"></div>
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon">✧</div>
+                <h3>Your achievement journey starts here.</h3>
+                <p>
+                    Certificates and accomplishments will appear here
+                    as you add them to your collection.
+                </p>
+                <span>More milestones coming soon.</span>
+            </div>
+        </section>
+        <section class="achievement-section future-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">02 / THE ROAD AHEAD</p>
+                    <h2>More Milestones to Come</h2>
+                    <p class="section-description">
+                        Areas where I aim to gain experience and create impact.
+                    </p>
+                </div>
+            </div>
+            <div class="future-grid">
+                <article class="future-card">
+                    <span>💻</span>
+                    <h3>Technical Certifications</h3>
+                    <p>Professional courses and technology certifications.</p>
+                    <small>Future milestone</small>
+                </article>
+                <article class="future-card">
+                    <span>⚡</span>
+                    <h3>Hackathons</h3>
+                    <p>Building solutions, collaborating and competing.</p>
+                    <small>Future milestone</small>
+                </article>
+                <article class="future-card">
+                    <span>🏢</span>
+                    <h3>Internships</h3>
+                    <p>Practical industry experience and professional growth.</p>
+                    <small>Future milestone</small>
+                </article>
+                <article class="future-card">
+                    <span>🏅</span>
+                    <h3>Awards & Recognition</h3>
+                    <p>Achievements earned through effort and contribution.</p>
+                    <small>Future milestone</small>
+                </article>
+                <article class="future-card">
+                    <span>🧠</span>
+                    <h3>AI & Research</h3>
+                    <p>Exploring artificial intelligence and innovative ideas.</p>
+                    <small>Future milestone</small>
+                </article>
+                <article class="future-card">
+                    <span>🌐</span>
+                    <h3>Community & Leadership</h3>
+                    <p>Contributing to communities and collaborative initiatives.</p>
+                    <small>Future milestone</small>
+                </article>
+            </div>
+        </section>
+        <section class="closing-section">
+            <p class="eyebrow">CONTINUOUS IMPROVEMENT</p>
+            <h2>Not just collecting certificates. Building capabilities.</h2>
+            <p>
+                My goal is to turn every learning opportunity into
+                practical knowledge, meaningful projects and real-world skills.
+            </p>
+            <a href="projects.html" class="action-link">Explore My Projects ↗</a>
+        </section>
+    </main>
+    <div class="certificate-modal" id="certificateModal"
+         aria-hidden="true">
+        <div class="viewer-content" role="dialog"
+             aria-modal="true" aria-labelledby="viewerTitle">
+            <button class="viewer-close" id="viewerClose"
+                    aria-label="Close certificate">×</button>
+            <p class="eyebrow">CERTIFICATE DETAILS</p>
+            <h2 id="viewerTitle">Certificate</h2>
+            <p id="viewerIssuer"></p>
+            <p id="viewerDate"></p>
+            <img id="viewerImage" src="" alt="Certificate preview">
+            <a id="openOriginal" href="#" target="_blank"
+               rel="noopener noreferrer" class="action-link">
+                Open Original Image ↗
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p><span id="year"></span> Shaurya Chaudhary. Always learning.</p>
+    </footer>
+    <script src="achievements.js"></script>
+</body>
+</html>
